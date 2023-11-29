@@ -1,0 +1,90 @@
+Types of Employees:
+
+   Lecturer, StudentEmployee, Staff, Faculty, Admin, ...
+
+Employee
+-name
+-addr
+-email
+-eid
++getName()
++getAddr()
++getEmail()
++getEid()
++setName()
++setAddr()
++setEmail()
++display()
+
+
+
+
+
+Lecturer
+-name
+-addr
+-email
+-eid
+-courseRate (specific to Lecturer)
+-emplPerc (specific to Lecturer)
++getName()
++getAddr()
++getEmail()
++getEid()
++getCourseRate() (specific to Lecturer)
++getEmplPerc() (specific to Lecturer)
++setName()
++setAddr()
++setEmail()
++setCourseRate() (specific to Lecturer)
++setEmplPerc() (specific to Lecturer)
++display()
++paycheckAmt()
+
+StudentEmployee
+-name
+-addr
+-email
+-eid
+-numHours (specific to StudentEmployee)
+-hourlyRate (specific to StudentEmployee)
++getName()
++getAddr()
++getEmail()
++getEid()
++getNumHours() (specific to StudentEmployee)
++getHourlyRate() (specific to StudentEmployee)
++setName()
++setAddr()
++setEmail()
++setNumHours() (specific to StudentEmployee)
++setHourlyRate() (specific to StudentEmployee)
++display()
++paycheckAmt()
+
+
+
+
+
+virtual function:
+ - causes dynamic binding
+ 
+dynamic binding:
+ - at runtime bind the function according to the type of the object 
+    being pointed to (or referenced) rather than 
+    the type of the pointer (or reference).
+    
+static binding:
+ - at compile time bind the function according to the type of the pointer (or reference)
+
+
+
+
+pure virtual function: (add "= 0" to end of virtual function declaration)
+ - not necessary to implement function for base class
+ - derived class MUST override
+ - class now abstract base class
+ 
+abstract base class:
+ - if at least one function is pure virtual
+ - cannot instantiate an object of this type (can only derive from it)
